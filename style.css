@@ -1,0 +1,475 @@
+/* 1. Basic page styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f8f9f5;
+  color: #242a25;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 1.15;
+  letter-spacing: -2px;
+}
+
+h2 {
+  font-size: 34px;
+  line-height: 1.3;
+  letter-spacing: -1px;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 23px;
+}
+
+p {
+  color: #60685e;
+}
+
+em {
+  color: #526339;
+  font-family: Georgia, serif;
+  font-weight: normal;
+}
+
+a {
+  color: #35482b;
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  color: #677d47;
+}
+
+a:focus-visible, input:focus-visible {
+  outline: 3px solid #526339;
+  outline-offset: 5px;
+}
+
+section {
+  scroll-margin-top: 150px;
+}
+
+.section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.label {
+  margin-bottom: 18px;
+  color: #526339;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.section-intro {
+  margin-bottom: 30px;
+}
+
+/* 2. Header and navigation use Flexbox */
+header {
+  background-color: #f8f9f5;
+  border-bottom: 1px solid #dfe3d9;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.brand {
+  color: #242a25;
+  font-family: Georgia, serif;
+  font-size: 42px;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.brand span {
+  color: #6c804b;
+}
+
+.brand small {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #41483e;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* 3. Home section: text on the left, a simple card on the right */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.hero-copy {
+  flex: 2;
+  min-width: 0;
+}
+
+.intro {
+  max-width: 470px;
+  font-size: 18px;
+  margin-bottom: 28px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 22px;
+  background-color: #28372b;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #526339;
+  color: white;
+}
+
+.location {
+  margin-top: 28px;
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.intro-card {
+  flex: 1;
+  min-width: 0;
+  padding: 30px;
+  background-color: #e9efd9;
+  border: 1px solid #d4dec0;
+  border-radius: 14px;
+}
+
+.monogram {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 110px;
+  font-style: italic;
+  color: #526339;
+  line-height: 1.4;
+}
+
+.intro-card h2 {
+  font-size: 26px;
+}
+
+.card-footer {
+  margin: 25px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid #cbd6b9;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+/* 4. Grid arranges the four projects into two columns */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.project-card {
+  min-width: 0;
+  border: 1px solid #dfe3d9;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.project-cover {
+  padding: 28px;
+  min-height: 205px;
+}
+
+.project-cover span {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.project-cover p {
+  margin-top: 25px;
+  margin-bottom: 0;
+  font-size: 34px;
+  font-family: Georgia, serif;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.pixelforge {
+  background-color: #293329;
+  color: #d8ecad;
+}
+
+.fitness {
+  background-color: #eee5dc;
+  color: #94451f;
+}
+
+.jarvas {
+  background-color: #e9e8f0;
+  color: #56506c;
+}
+
+.khanak {
+  background-color: #f1e7e4;
+  color: #744760;
+}
+
+.project-info {
+  padding: 24px;
+}
+
+.project-info p {
+  font-size: 15px;
+}
+
+.project-info a {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* 5. About section and skills */
+.about-section {
+  background-color: #eff2e9;
+  border-top: 1px solid #dfe3d9;
+  border-bottom: 1px solid #dfe3d9;
+}
+
+.about-layout {
+  display: flex;
+  gap: 60px;
+}
+
+.about-layout > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.skills-list li {
+  padding: 10px 18px;
+  border: 1px solid #d5ddc9;
+  border-radius: 5px;
+  background-color: white;
+}
+
+/* 6. Achievements are a normal unordered list styled as rows */
+.achievements-section {
+  border-top: 1px solid #dfe3d9;
+  border-bottom: 1px solid #dfe3d9;
+}
+
+.achievement-list {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+}
+
+.achievement-list li {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 20px 0;
+  border-bottom: 1px solid #dfe3d9;
+}
+
+.achievement-list strong {
+  width: 210px;
+  flex-shrink: 0;
+  font-size: 24px;
+  color: #526339;
+}
+
+.achievement-list span {
+  color: #60685e;
+}
+
+/* 7. Goal checkboxes are native HTML controls */
+.goal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.goal-list li {
+  margin-bottom: 14px;
+  padding: 20px;
+  border: 1px solid #dfe3d9;
+  border-radius: 7px;
+  background-color: white;
+}
+
+.goal-list label {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.goal-list input {
+  margin-top: 7px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  accent-color: #526339;
+}
+
+.goal-list span {
+  color: #60685e;
+  font-size: 14px;
+}
+
+.goal-list strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #28372b;
+  font-size: 16px;
+}
+
+.small-note {
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+/* 8. Contact and footer */
+.contact-section {
+  padding: 40px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  background-color: #e6edda;
+  border: 1px solid #d4dec0;
+  border-radius: 12px;
+}
+
+.contact-section p {
+  max-width: 580px;
+}
+
+.contact-link {
+  display: inline-block;
+  margin: 15px 0 0 20px;
+  font-weight: bold;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px 0 32px;
+  border-top: 1px solid #dfe3d9;
+  font-size: 13px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* 9. On smaller screens, stack the columns and wrap navigation */
+@media (max-width: 800px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  .about-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .intro-card {
+    padding: 25px;
+  }
+  .monogram {
+    font-size: 80px;
+  }
+  h1 {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 560px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .nav-links {
+    gap: 12px 18px;
+  }
+  .section {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  h1 {
+    font-size: 39px;
+    letter-spacing: -1px;
+  }
+  h2 {
+    font-size: 29px;
+  }
+  .achievement-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  .achievement-list strong {
+    width: auto;
+  }
+  .contact-section {
+    padding: 25px;
+  }
+}
